@@ -35,5 +35,5 @@ ImageCard.args = {
     image: 'https://picsum.photos/200/300',
     headline: 'Food',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam massa, nec lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam massa, nec lacinia nisl nisl sit amet nisl.',
-    footer: 'Read more'
+    link: 'Read'
 }
