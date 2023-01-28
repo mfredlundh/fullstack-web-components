@@ -27,6 +27,7 @@ export function validate (elem: any, showError: boolean) {
 
             if (showError) {
                 if (elem.$input) {
+                    elem.$input.setAttribute('aria-invalid', 'true');
                     elem.$input.classList.add('error');
                 }
 
