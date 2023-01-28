@@ -1,5 +1,6 @@
 import { html } from 'lit-html';
-import { TExtInputComponent } from './TextInput';
+import { TextInputComponent } from './TextInput';
+import { ButtonComponent } from '../button/Button';
 
 export default {
     title: 'Components/Input/TextInput',
@@ -139,7 +140,7 @@ const FormTemplate = ({ headline, onSubmit, onValidate, onFormData}) => {
                     class="form-control"
                 ></in-textinput>
 
-                <input class="submit" type="submit" value="Submit" />
+                <button is="in-button" type="submit" class="primary submit">Submit</button>
             </fieldset>
         </form>    
     `;
