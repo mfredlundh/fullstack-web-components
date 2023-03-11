@@ -1,5 +1,6 @@
+import { attachStyle, Component, html, css } from '@in/common';
 
-const buttonStyles = `
+const buttonStyles = css`
     .in-button.primary {
         background: var(--color-blue-500);
         border: 2px solid var(--color-blue-500);
@@ -95,7 +96,11 @@ const buttonStyles = `
     }
 `;
 
-
+@Component({
+    custom: { extends: 'button'},
+    selector: 'in-button',
+    style: buttonStyles,
+})
 export class ButtonComponent extends HTMLButtonElement {
     constructor() {
         super();
@@ -103,21 +108,6 @@ export class ButtonComponent extends HTMLButtonElement {
 
     connectedCallback() {
         this.classList.add('in-button');
-        this.addStyleSheet();
-    }
-
-    addStyleSheet() {
-        const head = document.head;
-        if (document.getElementById('in-button-styles')) {
-            return;
-        }
-
-        const style = document.createElement('style');
-        style.setAttribute('id', 'in-button-styles');
-        style.textContent = buttonStyles;
-        
-        head.appendChild(style);
+        attachStyle(this);
     }
 }
-
-customElements.define('in-button', ButtonComponent, { extends: 'button' });
